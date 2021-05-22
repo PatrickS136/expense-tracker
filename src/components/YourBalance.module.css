@@ -1,7 +1,13 @@
 .your-balance{
     font-size: large;
+    margin-bottom: 40px;
+}
+
+.your-balance-text{
+    margin-bottom: 0;
 }
 
 .your-balance-ammount{
     font-weight: 700;
+    margin-top: 0;
 }

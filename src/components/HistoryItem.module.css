@@ -1,0 +1,31 @@
+.history-item-income{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 6px solid;
+    border-color: #4aa96c;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    margin: 15px 0;
+}
+
+.history-item-expense{
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-right: 6px solid;
+    border-color: #f55c47;
+    box-shadow: 0 1px 5px rgb(138, 137, 137);
+    margin: 15px 0;
+}
+
+/* .history-item-title{
+    margin-left: 1px;
+}
+
+.history-item-amount{
+    margin-right: 1px;
+} */
