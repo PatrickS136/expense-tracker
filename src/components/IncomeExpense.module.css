@@ -1,0 +1,12 @@
+.income-expense{
+    background-color: white;
+    display: inline-block;
+}
+
+.income{
+    display: inline-block;
+}
+
+.expense{
+    display: inline-block;
+}
