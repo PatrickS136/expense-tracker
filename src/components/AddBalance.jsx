@@ -19,7 +19,7 @@ const AddBalance=props=>{
                     income:(amount<0)?false:true,
                     amount:Math.abs(amount),
                     id:Math.random(),
-                    title:title.trim(),
+                    title:title.trim()[0].toUpperCase()+title.trim().substr(1).toLowerCase(),
                 })
             })
             const data=await response.json()
