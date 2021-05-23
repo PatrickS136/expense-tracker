@@ -8,7 +8,7 @@ const AddBalance=props=>{
 
 
     const submitHandler=(event)=>{
-        event.preventDefault();
+        // event.preventDefault();
         console.log(title);
         console.log(amount);
 
@@ -16,7 +16,7 @@ const AddBalance=props=>{
             const response=await fetch("https://react-udemy-tasks-default-rtdb.firebaseio.com/expenses.json",{
                 method:"POST",
                 body:JSON.stringify({
-                    income:(amount<0),
+                    income:(amount<0)?false:true,
                     amount:Math.abs(amount),
                     id:Math.random(),
                     title:title.trim(),
@@ -36,6 +36,7 @@ const AddBalance=props=>{
 
         setTitle("");
         setAmount(0);
+
     }
 
     const titleChangeHandler=(event)=>{
@@ -50,9 +51,9 @@ const AddBalance=props=>{
         <SectionTitle title="Add a new entry" />
         <form className={classes.form} onSubmit={submitHandler}>
             <label htmlFor="title">Title : </label>
-            <input onChange={titleChangeHandler} type="text" id="title" value={title} />
+            <input onChange={titleChangeHandler} type="text" id="title" value={title} autoComplete={"off"} autoCapitalize={"on"} />
             <label htmlFor="amount">Amount : </label>
-            <input onChange={amountChangeHandler} type="number" id="amount" value={amount} />
+            <input onChange={amountChangeHandler} type="number" id="amount" value={amount} autoComplete={false} />
             <button type="submit" disabled={title.trim().length===0 || amount===0 || amount===""}>Add</button>
         </form>
     </div>

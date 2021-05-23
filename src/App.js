@@ -8,6 +8,7 @@ import AddBalance from './components/AddBalance';
 const App=()=>{
   const {historyItems,loading}=useHttp();
 
+
   const appContent=loading ? <p>Loading...</p> : 
   <div className="app-content">
     <YourBalance historyItems={historyItems}/>
@@ -21,6 +22,7 @@ const App=()=>{
     <div className="App">
       <h2 className="title">Expense Tracker</h2>
       {appContent}
+      <h4 className="title">Patrick Sumarli</h4>
     </div>
   );
 }
