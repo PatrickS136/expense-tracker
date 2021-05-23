@@ -54,7 +54,7 @@ const AddBalance=props=>{
             <input onChange={titleChangeHandler} type="text" id="title" value={title} autoComplete={"off"} autoCapitalize={"on"} />
             <label htmlFor="amount">Amount : </label>
             <input onChange={amountChangeHandler} type="number" id="amount" value={amount} autoComplete={false} />
-            <button type="submit" disabled={title.trim().length===0 || amount===0 || amount===""}>Add</button>
+            <button type="submit" disabled={title.trim().length===0 || amount===0 || amount==="" || amount==="0"}>Add</button>
         </form>
     </div>
 }
