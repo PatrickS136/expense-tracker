@@ -1,3 +1,4 @@
+import SectionTitle from "./SectionTitle";
 import classes from "./YourBalance.module.css"
 
 const YourBalance=(props)=>{
@@ -7,7 +8,7 @@ const YourBalance=(props)=>{
     },0)
 
     return <div className={classes["your-balance"]}>
-        <p className={classes["your-balance-text"]}>Your Balance</p>
+        <SectionTitle title="Your Balance" />
         <p className={classes["your-balance-ammount"]}>${balance.toFixed(2)}</p>
     </div>
 };

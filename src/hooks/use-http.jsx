@@ -1,4 +1,4 @@
-import {useState,useEffect} from "react"
+import { useState, useEffect } from "react";
 
 const useHttp = () => {
   const [historyItems, setHistoryItems] = useState([]);
@@ -19,13 +19,22 @@ const useHttp = () => {
       for (let key in data) {
         fetchedHistoryItems.push(data[key]);
       }
+      fetchedHistoryItems.sort((a, b)=>{
+        if (a.title < b.title) {
+          return -1;
+        }
+        if (a.title > b.title) {
+          return 1;
+        }
+        return 0;
+      });
       setHistoryItems(fetchedHistoryItems);
     };
     fetchBalanceData();
     setLoading(false);
   }, []);
 
-  return {historyItems,loading};
+  return { historyItems, loading };
 };
 
 export default useHttp;

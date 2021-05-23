@@ -1,4 +1,4 @@
-import classes from "SectionTitle.module.css"
+import classes from "./SectionTitle.module.css"
 
 const SectionTitle=props=>{
     return <>
@@ -7,4 +7,4 @@ const SectionTitle=props=>{
     </>
 }
 
-export default SectionTitle
+export default SectionTitle;
